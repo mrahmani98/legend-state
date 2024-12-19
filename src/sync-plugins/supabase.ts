@@ -421,7 +421,7 @@ export function syncedSupabase<
         SupabaseRowOf<Client, Collection, SchemaName>,
         AsOption
     >({
-        ...rest,
+        ...(rest as any),
         mode: mode || 'merge',
         list,
         create,
